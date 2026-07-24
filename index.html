@@ -765,4 +765,768 @@
             margin-top: 20px;
         }
 
- 
+        .contact-form {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-family: inherit;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--secondary-blue);
+        }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background: var(--dark-bg);
+            color: #94a3b8;
+            padding-top: 70px;
+            padding-bottom: 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col p {
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+            padding-left: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            width: 38px;
+            height: 38px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background: var(--gradient-accent);
+        }
+
+        .newsletter-form input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: none;
+            margin-bottom: 10px;
+            outline: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* ==================== RESPONSIVE DESIGN ==================== */
+        @media (max-width: 992px) {
+            .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 250px;
+                height: 100vh;
+                background: var(--dark-bg);
+                flex-direction: column;
+                justify-content: center;
+                transition: var(--transition);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                color: #fff !important;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item.right {
+                left: 0%;
+            }
+
+            .timeline-item::after {
+                left: 23px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <span class="logo-icon"></span>
+                    Global English Academy
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#why-us">Why Us</a></li>
+                    <li><a href="#process">Admission</a></li>
+                    <li><a href="#trainers">Trainers</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">Empower Your Future</span>
+                <h1>Master Fluency. Unleash Global Opportunities.</h1>
+                <p>Join India's premier English language institute. Personalized training for IELTS, PTE, Spoken English, and Professional Communication.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">Book Free Demo</a>
+                    <a href="#courses" class="btn btn-secondary">Explore Courses</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3 class="counter" data-target="15000">0</h3>
+                        <p>Students Trained</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="counter" data-target="98">0</h3>
+                        <p>Success Rate %</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="counter" data-target="12">0</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="counter" data-target="8">0</h3>
+                        <p>Average Band Score</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-padding" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Students Learning">
+                    <div class="about-experience-card">
+                        <i class="fas fa-award"></i>
+                        <div>
+                            <strong>12+ Years</strong>
+                            <p style="font-size: 0.8rem; margin:0;">Excellence in Education</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h3>Transforming Communication Skills with Interactive Pedagogy</h3>
+                    <p>At Global English Academy, we go beyond traditional rote learning. Our communicative methodology focuses on real-world practical application, confidence building, and personalized attention.</p>
+                    <div class="about-features">
+                        <div class="about-feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Certified Trainers</strong>
+                                <p>Learn from certified language experts with international teaching credentials.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Small Batch Sizes</strong>
+                                <p>Max 10-12 students per batch to guarantee individual evaluation and feedback.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="section-padding courses" id="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Featured Courses</h2>
+                <p>Tailored programs designed to help you achieve academic, professional, and personal language goals.</p>
+            </div>
+            <div class="course-grid">
+                <!-- Course 1 -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" alt="IELTS">
+                        <span class="course-tag">Top Rated</span>
+                    </div>
+                    <div class="course-body">
+                        <h3>IELTS Preparation</h3>
+                        <p>Comprehensive training covering Listening, Reading, Writing, and Speaking with exhaustive mock tests.</p>
+                        <div class="course-footer">
+                            <span>Duration: 8 Weeks</span>
+                            <a href="#contact" class="course-link">Enroll Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 2 -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="PTE">
+                        <span class="course-tag">Computer-Based</span>
+                    </div>
+                    <div class="course-body">
+                        <h3>PTE Academic</h3>
+                        <p>Specialized AI-driven test software practice focusing on item types and scoring algorithms.</p>
+                        <div class="course-footer">
+                            <span>Duration: 6 Weeks</span>
+                            <a href="#contact" class="course-link">Enroll Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 3 -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Spoken English">
+                        <span class="course-tag">Popular</span>
+                    </div>
+                    <div class="course-body">
+                        <h3>Spoken English Mastery</h3>
+                        <p>Overcome hesitancy, master pronunciation, gain fluency, and enrich vocabulary through live practice.</p>
+                        <div class="course-footer">
+                            <span>Duration: 12 Weeks</span>
+                            <a href="#contact" class="course-link">Enroll Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 4 -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Business English">
+                        <span class="course-tag">Corporate</span>
+                    </div>
+                    <div class="course-body">
+                        <h3>Business English</h3>
+                        <p>Master corporate correspondence, presentation skills, negotiations, and workplace communication.</p>
+                        <div class="course-footer">
+                            <span>Duration: 4 Weeks</span>
+                            <a href="#contact" class="course-link">Enroll Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 5 -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&q=80" alt="Interview Prep">
+                        <span class="course-tag">Career Acceleration</span>
+                    </div>
+                    <div class="course-body">
+                        <h3>Interview Preparation</h3>
+                        <p>Mock interviews, body language training, resume building, and response structuring techniques.</p>
+                        <div class="course-footer">
+                            <span>Duration: 2 Weeks</span>
+                            <a href="#contact" class="course-link">Enroll Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section-padding" id="why-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Global English Academy?</h2>
+                <p>We provide a world-class environment geared towards rapid skill improvement.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-user-graduate"></i></div>
+                    <h3>Certified Experts</h3>
+                    <p>Learn from trainers with over a decade of international experience and CELTA/TESOL certifications.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Modern Tech Labs</h3>
+                    <p>Access high-tech audio-visual labs and realistic PTE computer simulation software.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Flexible Timings</h3>
+                    <p>Choose from weekday morning/evening batches or weekend intensive sessions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Daily Speaking Club</h3>
+                    <p>Free lifetime access to daily group discussion clubs to maintain active fluency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Process Timeline -->
+    <section class="section-padding" style="background: #f8fafc;" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Simple Admission Process</h2>
+                <p>Get started on your transformation journey in just four easy steps.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>1. Free Assessment Test</h3>
+                        <p>Take a 15-minute diagnostic evaluation to check your current proficiency level.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>2. Course Counseling</h3>
+                        <p>Meet our academic advisors to select the ideal module tailored to your goals.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>3. Demo Class</h3>
+                        <p>Attend a live interactive session to experience our dynamic teaching methodology.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>4. Enrollment & Onboarding</h3>
+                        <p>Receive your customized study plan, course materials, and access to learning portal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Slider -->
+    <section class="section-padding testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Student Success Stories</h2>
+                <p>Read what our alumni say about their learning experience with us.</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-slide active">
+                    <p class="testimonial-text">"I scored 8.5 overall in IELTS on my first attempt! The regular mock tests and personalized feedback on my writing essays made all the difference."</p>
+                    <div class="testimonial-user">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Student">
+                        <div>
+                            <h4>Priya Sharma</h4>
+                            <span style="font-size: 0.8rem; opacity: 0.8;">IELTS Student</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <p class="testimonial-text">"The Spoken English course completely removed my fear of speaking in public. Today, I comfortably host client presentations at my corporate job."</p>
+                    <div class="testimonial-user">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Student">
+                        <div>
+                            <h4>Rohan Verma</h4>
+                            <span style="font-size: 0.8rem; opacity: 0.8;">Spoken English Student</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active" onclick="setSlide(0)"></span>
+                <span class="dot" onclick="setSlide(1)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section class="section-padding" id="trainers">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Lead Mentors</h2>
+                <p>Learn from seasoned professionals dedicated to your success.</p>
+            </div>
+            <div class="trainers-grid">
+                <div class="trainer-card">
+                    <div class="trainer-img">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" alt="Trainer">
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Dr. Ananya Roy</h3>
+                        <p>Senior IELTS Specialist</p>
+                        <span style="font-size: 0.85rem; color: var(--text-muted);">15+ Yrs Exp | Ph.D. in Linguistics</span>
+                    </div>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-img">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Trainer">
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Mark Anderson</h3>
+                        <p>Voice & Accent Coach</p>
+                        <span style="font-size: 0.85rem; color: var(--text-muted);">CELTA Certified | Ex-Corporate Trainer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding" style="background: #f1f5f9;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Have questions? We're here to help you understand better.</p>
+            </div>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <span>Are online classes available?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-content">
+                        Yes! We offer live interactive online batches as well as offline classroom sessions at our modern facilities.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <span>What is the average batch size?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-content">
+                        To maintain individual focus and high interaction quality, our batch size is restricted to 10-12 students.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <span>Do you offer mock test evaluations?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-content">
+                        Yes, full-length weekly mock tests evaluated line-by-line with individual feedback sessions are included in all IELTS/PTE courses.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Book your free demo class or ask any questions.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Academy Address</h4>
+                            <p>Suite 402, Business Tower, Connaught Place, New Delhi, 110001</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+91 98765 43210 / +91 011 2345 6789</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>info@globalenglishacademy.com</p>
+                        </div>
+                    </div>
+                    <!-- Map Placeholder -->
+                    <div class="map-placeholder">
+                        <p><i class="fas fa-map"></i> Embedded Google Map View</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="enquiryForm">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" required placeholder="+91 9876543210">
+                        </div>
+                        <div class="form-group">
+                            <label>Interested Course</label>
+                            <select required>
+                                <option value="">Select a Course</option>
+                                <option value="ielts">IELTS Preparation</option>
+                                <option value="pte">PTE Academic</option>
+                                <option value="spoken">Spoken English</option>
+                                <option value="business">Business English</option>
+                                <option value="interview">Interview Prep</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Message</label>
+                            <textarea rows="4" placeholder="How can we help you?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 15px;">
+                        <span class="logo-icon"></span>
+                        Global English Academy
+                    </a>
+                    <p>Empowering individuals with high-impact English communication skills for global education, career advancement, and personal growth.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#why-us">Why Choose Us</a></li>
+                        <li><a href="#process">Admission</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Courses</h3>
+                    <ul class="footer-links">
+                        <li><a href="#courses">IELTS Preparation</a></li>
+                        <li><a href="#courses">PTE Academic</a></li>
+                        <li><a href="#courses">Spoken English</a></li>
+                        <li><a href="#courses">Business English</a></li>
+                        <li><a href="#courses">Interview Prep</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive English learning tips & event updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 6px;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Global English Academy. All Rights Reserved. Designed for excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        // Sticky Navigation Header on Scroll
+        const header = id => document.getElementById(id);
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header('header').classList.add('scrolled');
+            } else {
+                header('header').classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close Mobile Menu on Nav Item Click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Animated Number Counters
+        const counters = document.querySelectorAll('.counter');
+        let counterAnimated = false;
+
+        window.addEventListener('scroll', () => {
+            const heroSection = document.querySelector('.hero-stats');
+            const position = heroSection.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight;
+
+            if(position < screenPosition && !counterAnimated) {
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    let count = 0;
+                    const speed = target / 50;
+
+                    const updateCount = () => {
+                        count += speed;
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count) + '+';
+                            setTimeout(updateCount, 30);
+                        } else {
+                            counter.innerText = target + '+';
+                        }
+                    };
+                    updateCount();
+                });
+                counterAnimated = true;
+            }
+        });
+
+        // Testimonial Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function setSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            currentSlide = index;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            setSlide(currentSlide);
+        }, 5000);
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const header = item.querySelector('.faq-header');
+            header.addEventListener('click', () => {
+                const isOpen = item.classList.contains('active');
+                
+                // Close all other items
+                faqItems.forEach(i => i.classList.remove('active'));
+
+                // Toggle target item
+                if (!isOpen) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Form Submit Prevent Default & Alert
+        document.getElementById('enquiryForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you! Your enquiry has been sent. Our team will get in touch shortly.');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
